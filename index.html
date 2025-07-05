@@ -121,19 +121,4 @@
     <p>© Copyright by Legacy Roleplay Bangladesh</p>
   </footer>
 </body>
-<script>
-  const sliderImages = [
-    'assets/gallery/img1.jpg',
-    'assets/gallery/img2.jpg',
-    'assets/gallery/img3.jpg'
-  ];
-  
-  let currentSlide = 0;
-  const slider = document.getElementById('slider');
-
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % sliderImages.length;
-    slider.src = sliderImages[currentSlide];
-  }, 3000);
-</script>
 </html>
