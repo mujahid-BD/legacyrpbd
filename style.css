@@ -264,6 +264,20 @@ footer {
   background: #008dd1;
 }
 
+/* ==== Home Page Image Slider ==== */
+.slider-box {
+  width: 572px;
+}
+
+.slider-box img#slider {
+  width: 572px;
+  height: 368px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ==== Responsive ==== */
 @media (max-width: 768px) {
   nav ul {
