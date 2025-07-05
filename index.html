@@ -88,6 +88,11 @@
     <div class="slider-box">
       <h2>Our Community Moments</h2>
       <img src="assets/gallery/img1.jpg" alt="Slide 1" style="width:100%; border-radius: 10px;">
+      <img src="assets/gallery/img1.jpg" alt="Slide 1" style="width:100%; border-radius: 10px;">
+      <img src="assets/gallery/img1.jpg" alt="Slide 1" style="width:100%; border-radius: 10px;">
+      <img src="assets/gallery/img1.jpg" alt="Slide 1" style="width:100%; border-radius: 10px;">
+      <img src="assets/gallery/img1.jpg" alt="Slide 1" style="width:100%; border-radius: 10px;">
+      <img src="assets/gallery/img1.jpg" alt="Slide 1" style="width:100%; border-radius: 10px;">
 
       <section class="quick-links">
         <h3>Quick Links</h3>
@@ -102,9 +107,11 @@
     <div class="about-box">
       <h2 class="highlight-title">About the Community</h2>
       <p class="about-details">
-        Legacy RP Bangladesh is a Bangladeshi FiveM roleplay server built to provide immersive, story-driven RP
-        with active administration, local language support, and frequent events. Whether you’re new or experienced,
-        our community is here to guide you through your RP journey.
+        Legacy Roleplay is an English community founded in early 2018. We have been asked to create a subdivision, aimed at players from Bangladesh. As we are open and intrigued by the new possibilities and opportunities.
+        This "subdivision" of Legacy is owned by the main community, but is fully managed and controlled by others.
+        We hope this allows for a better and more enjoyable experience for the Bengali part of our community, and provides a better environment for role play and growth.
+        FiveM servers are still hosted by the main community. This discord is also owned by the main community, but is controlled by another person.
+        The FiveM server database is not synchronized between the main server and this division.
       </p>
       <a href="https://discord.gg/Fczm428E" class="discord-btn" target="_blank">Join Discord</a>
     </div>
@@ -114,4 +121,19 @@
     <p>© Copyright by Legacy Roleplay Bangladesh</p>
   </footer>
 </body>
+<script>
+  const sliderImages = [
+    'assets/gallery/img1.jpg',
+    'assets/gallery/img2.jpg',
+    'assets/gallery/img3.jpg'
+  ];
+  
+  let currentSlide = 0;
+  const slider = document.getElementById('slider');
+
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % sliderImages.length;
+    slider.src = sliderImages[currentSlide];
+  }, 3000);
+</script>
 </html>
