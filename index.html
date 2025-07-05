@@ -2,17 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Legacy Roleplay Bangladesh</title>
+  <title>Home | Legacy RP Bangladesh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .home-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 30px auto;
+    }
+
+    .slider-box, .about-box {
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .slider-box {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+    }
+
+    .about-box {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .highlight-title {
+      font-size: 1.8em;
+      color: #00acee;
+      margin-bottom: 10px;
+    }
+
+    .about-details {
+      font-size: 1em;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .discord-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #5865F2;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .discord-btn:hover {
+      background-color: #4752c4;
+    }
+
+    .quick-links {
+      background: rgba(255,255,255,0.05);
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
     <img src="assets/logo.png" alt="Logo" class="logo">
-    <h1>Welcome to Legacy Roleplay Bangladesh</h1>
+    <h1>Legacy RP Bangladesh</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="priority.html">Priority</a></li>
         <li><a href="applications.html">Applications</a></li>
         <li><a href="guide.html">Guide</a></li>
@@ -23,30 +83,35 @@
     </nav>
   </header>
 
-  <section class="main-section">
-    <div class="image-box">
-      <img src="assets/bg-placeholder.jpg" alt="Police Scene">
-    </div>
-    <div class="about">
-      <h2>About the community</h2>
-      <p><strong>Another "subdivision" of Legacy Roleplay: Bangladesh</strong></p>
-      <p>Legacy Roleplay is an English community founded in early 2018. We have been asked to create a subdivision, aimed at players from Bangladesh. As we are open and intrigued by the new possibilities and opportunities.</p>
-      <p>This "subdivision" of Legacy is owned by the main community, but is fully managed and controlled by others.</p>
-      <p>We hope this allows for a better and more enjoyable experience for the Bengali part of our community, and provides a better environment for role play and growth.</p>
-      <p>FiveM servers are still hosted by the main community. This discord is also owned by the main community, but is controlled by another person.</p>
-      <p><em>The FiveM server database is not synchronized between the main server and this division.</em></p>
-      <a class="discord-btn" href="https://discord.gg/Fczm428E" target="_blank">Join Discord</a>
-    </div>
-  </section>
+  <div class="home-container">
+    <!-- Left Side: Image Slider -->
+    <div class="slider-box">
+      <h2>Our Community Moments</h2>
+      <img src="assets/gallery/img1.jpg" alt="Slide 1" style="width:100%; border-radius: 10px;">
 
-  <section class="quick-links">
-    <h3>🔗 Quick Links</h3>
-    <a href="https://findsteamid.com" target="_blank">Find Steam Hex</a>
-    <a href="https://fivem-status.com" target="_blank">FiveM Status</a>
-  </section>
+      <section class="quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <a href="https://findsteamid.com" target="_blank">Find Steam Hex</a>
+          <a href="https://fivem-status.com" target="_blank">FiveM Status</a>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Right Side: About Section -->
+    <div class="about-box">
+      <h2 class="highlight-title">About the Community</h2>
+      <p class="about-details">
+        Legacy RP Bangladesh is a Bangladeshi FiveM roleplay server built to provide immersive, story-driven RP
+        with active administration, local language support, and frequent events. Whether you’re new or experienced,
+        our community is here to guide you through your RP journey.
+      </p>
+      <a href="https://discord.gg/Fczm428E" class="discord-btn" target="_blank">Join Discord</a>
+    </div>
+  </div>
 
   <footer>
-    <p>© Copyright by Legacy Roleplay Bangladesh & Designed by MasteR</p>
+    <p>© Copyright by Legacy Roleplay Bangladesh</p>
   </footer>
 </body>
 </html>
