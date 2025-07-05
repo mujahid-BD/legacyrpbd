@@ -69,7 +69,7 @@ footer {
   margin-top: 40px;
 }
 
-/* ==== Priority Section ==== */
+/* ==== Common Page Sections ==== */
 .priority-section,
 .app-section,
 .guide-section,
@@ -96,6 +96,7 @@ footer {
   margin-bottom: 20px;
 }
 
+/* ==== Priority Table ==== */
 .priority-table {
   width: 100%;
   border-collapse: collapse;
@@ -263,7 +264,7 @@ footer {
   background: #008dd1;
 }
 
-/* ==== Responsive tweaks ==== */
+/* ==== Responsive ==== */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
