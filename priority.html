@@ -21,6 +21,12 @@
       border-radius: 12px;
       padding: 20px;
       height: 600px;
+      overflow-y: auto;
+    }
+
+    .left-box h2 {
+      text-align: center;
+      font-weight: bold;
     }
 
     .right-box-container {
@@ -43,6 +49,43 @@
       border-radius: 12px;
       padding: 20px;
       height: 250px;
+    }
+
+    .donation-list {
+      font-size: 0.95em;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .donation-list strong {
+      color: #00acee;
+      display: block;
+      margin-top: 15px;
+      font-size: 1.1em;
+      border-bottom: 1px solid #00acee;
+      padding-bottom: 4px;
+    }
+
+    .donation-list .intro-text {
+      font-weight: bold;
+      font-size: 1.05em;
+      margin-bottom: 10px;
+    }
+
+    .donation-list .buy-btn {
+      display: block;
+      width: fit-content;
+      margin: 10px auto;
+      background: #5865F2;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .donation-list .buy-btn:hover {
+      background: #4752c4;
     }
 
     @media (max-width: 768px) {
@@ -79,62 +122,34 @@
     </nav>
   </header>
 
-  <section class="priority-section">
-    <h2>Server Priority & Benefits</h2>
-    <p>Our priority system allows players to skip the queue and access the server faster during high traffic times. This helps our most dedicated supporters and contributors get into the game without waiting.</p>
-
-    <table class="priority-table">
-      <thead>
-        <tr>
-          <th>Tier</th>
-          <th>Name</th>
-          <th>Queue Priority</th>
-          <th>Cooldown</th>
-          <th>Monthly Cost</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Tier 1</td>
-          <td>Civilian</td>
-          <td>Standard</td>
-          <td>60 sec</td>
-          <td>৳300</td>
-        </tr>
-        <tr>
-          <td>Tier 2</td>
-          <td>Supporter</td>
-          <td>Medium</td>
-          <td>30 sec</td>
-          <td>৳500</td>
-        </tr>
-        <tr>
-          <td>Tier 3</td>
-          <td>VIP</td>
-          <td>High</td>
-          <td>10 sec</td>
-          <td>৳1000</td>
-        </tr>
-        <tr>
-          <td>Tier 4</td>
-          <td>Founder</td>
-          <td>Instant</td>
-          <td>0 sec</td>
-          <td>৳2500</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="priority-notes">
-      <p><strong>Note:</strong> Priority applies to queue system only. In-game advantages are not provided.</p>
-      <p>Payments are non-refundable and processed monthly. For support, contact staff on our <a href="https://discord.gg/Fczm428E" target="_blank">Discord</a>.</p>
-    </div>
-  </section>
-
   <div class="priority-container">
     <div class="left-box">
-      <h2>Left Side Box</h2>
-      <p>Info or image area</p>
+      <h2><strong>Buy Priority / Donate</strong></h2>
+      <div class="donation-list">
+        <p class="intro-text">If you want to Donate or Buy Priority, click below</p>
+        <a href="#" class="buy-btn">Buy Now</a>
+
+        <strong>Price Information</strong>
+        Appreciated Tier: 300 BDT / 350 INR<br>
+        Respected Tier: 899 BDT / 780 INR<br>
+        Heroic Tier: 2500 BDT / 2200 INR<br>
+        Legendary Tier: 3800 BDT / 3500 INR<br>
+        Godlike Tier: 4999 BDT / 4888 INR
+
+        <strong>Special Package Price Information</strong>
+        Custom Phone Number: 499 BDT / 449 INR<br>
+        Custom Vehicle Plate: 599 BDT / 555 INR<br>
+        Reskin Pack: 699 BDT / 649 INR<br>
+        Name Change Pack: 449 BDT / 399 INR
+
+        <strong>OP Points</strong>
+        10 Points: 499 BDT / 449 INR<br>
+        25 Points: 1199 BDT / 1099 INR<br>
+        50 Points: 2199 BDT / 1999 INR<br>
+        100 Points: 4299 BDT / 3899 INR
+
+        <br><br>
+      </div>
     </div>
 
     <div class="right-box-container">
@@ -160,7 +175,7 @@
   </div>
 
   <footer>
-    <p>© Copyright by Legacy Roleplay Bangladesh & Designed by MasteR</p>
+    <p>© Copyright by Legacy Roleplay Bangladesh</p>
   </footer>
 </body>
 </html>
