@@ -5,6 +5,62 @@
   <title>Priority | Legacy RP Bangladesh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .priority-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 30px auto;
+      gap: 20px;
+    }
+
+    .left-box {
+      width: 35%;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      padding: 20px;
+      height: 600px;
+    }
+
+    .right-box-container {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .top-right, .middle-right {
+      height: 290px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .full-box {
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      padding: 20px;
+      height: 250px;
+    }
+
+    @media (max-width: 768px) {
+      .priority-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .left-box, .right-box-container, .full-box {
+        width: 100%;
+        height: auto;
+      }
+
+      .top-right, .middle-right {
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -26,7 +82,7 @@
   <section class="priority-section">
     <h2>Server Priority & Benefits</h2>
     <p>Our priority system allows players to skip the queue and access the server faster during high traffic times. This helps our most dedicated supporters and contributors get into the game without waiting.</p>
-    
+
     <table class="priority-table">
       <thead>
         <tr>
@@ -74,6 +130,34 @@
       <p>Payments are non-refundable and processed monthly. For support, contact staff on our <a href="https://discord.gg/Fczm428E" target="_blank">Discord</a>.</p>
     </div>
   </section>
+
+  <div class="priority-container">
+    <div class="left-box">
+      <h2>Left Side Box</h2>
+      <p>Info or image area</p>
+    </div>
+
+    <div class="right-box-container">
+      <div class="top-right">
+        <h2>Top Right Box</h2>
+        <p>Additional Info</p>
+      </div>
+      <div class="middle-right">
+        <h2>Middle Right Box</h2>
+        <p>Another Section</p>
+      </div>
+    </div>
+
+    <div class="full-box">
+      <h2>Full Width Section</h2>
+      <p>Could be images, slider, or extra details</p>
+    </div>
+
+    <div class="full-box">
+      <h2>Another Full Width Box</h2>
+      <p>For example: pricing info, FAQ, etc.</p>
+    </div>
+  </div>
 
   <footer>
     <p>© Copyright by Legacy Roleplay Bangladesh & Designed by MasteR</p>
