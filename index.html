@@ -22,16 +22,17 @@
     }
 
     .slider-box {
-      flex: 1;
-      min-width: 300px;
-      max-width: 500px;
+      width: 572px;
+      flex: none;
     }
 
     .slider-box img {
-      width: 100%;
-      height: 500px;
+      width: 572px;
+      height: 368px;
       object-fit: cover;
       border-radius: 10px;
+      display: block;
+      margin: 0 auto;
     }
 
     .about-box {
@@ -70,6 +71,27 @@
       margin-top: 20px;
       padding: 15px;
       border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .home-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .slider-box {
+        width: 100%;
+      }
+
+      .slider-box img {
+        width: 100%;
+        height: auto;
+      }
+
+      .about-box {
+        width: 100%;
+        min-width: unset;
+      }
     }
   </style>
 </head>
