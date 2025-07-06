@@ -37,7 +37,6 @@
     }
 
     .top-right, .middle-right {
-      height: 290px;
       background: rgba(0,0,0,0.6);
       border-radius: 12px;
       padding: 20px;
@@ -48,7 +47,6 @@
       background: rgba(0,0,0,0.6);
       border-radius: 12px;
       padding: 20px;
-      height: 250px;
     }
 
     .donation-list {
@@ -88,6 +86,36 @@
       background: #4752c4;
     }
 
+    .priority-tabs {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .priority-tab {
+      background-color: #111;
+      color: #00acee;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .priority-tab:hover {
+      background-color: #222;
+    }
+
+    .priority-content {
+      margin-top: 15px;
+      color: #ccc;
+      display: none;
+    }
+
+    .priority-content.active {
+      display: block;
+    }
+
     @media (max-width: 768px) {
       .priority-container {
         flex-direction: column;
@@ -98,16 +126,12 @@
         width: 100%;
         height: auto;
       }
-
-      .top-right, .middle-right {
-        height: auto;
-      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="assets/logo-placeholder.png" alt="Logo" class="logo">
+    <img src="assets/logo.png" alt="Logo" class="logo">
     <h1>Legacy RP Bangladesh - Priority System</h1>
     <nav>
       <ul>
@@ -147,16 +171,39 @@
         25 Points: 1199 BDT / 1099 INR<br>
         50 Points: 2199 BDT / 1999 INR<br>
         100 Points: 4299 BDT / 3899 INR
-
-        <br><br>
       </div>
     </div>
 
     <div class="right-box-container">
       <div class="top-right">
-        <h2>Top Right Box</h2>
-        <p>Additional Info</p>
+        <h2>Available Priority Tiers</h2>
+        <p>Here you can find all the available priority for you who wish to support the project and its creators financially and receive some perks in exchange.</p>
+
+        <div class="priority-tabs">
+          <div class="priority-tab" onclick="showTab('appreciated')">Appreciated Tier</div>
+          <div class="priority-tab" onclick="showTab('heroic')">Heroic Tier</div>
+          <div class="priority-tab" onclick="showTab('respected')">Respected Tier</div>
+          <div class="priority-tab" onclick="showTab('legendary')">Legendary Tier</div>
+          <div class="priority-tab" onclick="showTab('godlike')">Godlike Tier</div>
+        </div>
+
+        <div id="appreciated" class="priority-content active">
+          <p>✅ Entry-level priority for supporters. Includes basic queue boost.</p>
+        </div>
+        <div id="heroic" class="priority-content">
+          <p>🔥 Powerful priority for dedicated players. Includes extra perks and queue speed.</p>
+        </div>
+        <div id="respected" class="priority-content">
+          <p>💎 Balanced priority package. Good for regular contributors with moderate perks.</p>
+        </div>
+        <div id="legendary" class="priority-content">
+          <p>🚀 High-tier priority with access to VIP support and fast-track entry.</p>
+        </div>
+        <div id="godlike" class="priority-content">
+          <p>👑 Ultimate priority for our most generous supporters. Top-tier access and all perks.</p>
+        </div>
       </div>
+
       <div class="middle-right">
         <h2>Middle Right Box</h2>
         <p>Another Section</p>
@@ -177,5 +224,12 @@
   <footer>
     <p>© Copyright by Legacy Roleplay Bangladesh</p>
   </footer>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.priority-content').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
