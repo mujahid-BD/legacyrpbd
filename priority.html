@@ -37,6 +37,7 @@
     }
 
     .top-right, .middle-right {
+      height: 290px;
       background: rgba(0,0,0,0.6);
       border-radius: 12px;
       padding: 20px;
@@ -47,6 +48,7 @@
       background: rgba(0,0,0,0.6);
       border-radius: 12px;
       padding: 20px;
+      height: 250px;
     }
 
     .donation-list {
@@ -86,75 +88,23 @@
       background: #4752c4;
     }
 
-    .priority-tabs {
+    .priority-links {
       display: flex;
+      flex-direction: column;
       gap: 10px;
-      margin-top: 15px;
-      flex-wrap: wrap;
     }
 
-    .priority-tab {
-      background-color: #111;
-      color: #00acee;
-      padding: 10px 15px;
+    .priority-links a {
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
       border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .priority-tab:hover {
-      background-color: #222;
-    }
-
-    .priority-content {
-      margin-top: 15px;
-      color: #ccc;
-      display: none;
-    }
-
-    .priority-content.active {
-      display: block;
-    }
-
-    .tier-box {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
-
-    .tier-box img {
-      width: 180px;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .tier-box .tier-text {
-      flex: 1;
-    }
-
-    .tier-box .tier-text ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    .tier-box .tier-text ul li {
-      margin-bottom: 8px;
-    }
-
-    .tier-box .price-btn {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #1e3c72;
-    }
-
-    .tier-box .buy-btn {
-      background: red;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
+      text-align: center;
       text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
+    }
+
+    .priority-links a:hover {
+      background-color: #555;
     }
 
     @media (max-width: 768px) {
@@ -168,21 +118,15 @@
         height: auto;
       }
 
-      .tier-box {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .tier-box img {
-        width: 100%;
-        max-width: 300px;
+      .top-right, .middle-right {
+        height: auto;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="assets/logo.png" alt="Logo" class="logo">
+    <img src="assets/logo-placeholder.png" alt="Logo" class="logo">
     <h1>Legacy RP Bangladesh - Priority System</h1>
     <nav>
       <ul>
@@ -229,49 +173,12 @@
       <div class="top-right">
         <h2>Available Priority Tiers</h2>
         <p>Here you can find all the available priority for you who wish to support the project and its creators financially and receive some perks in exchange.</p>
-
-        <div class="priority-tabs">
-          <div class="priority-tab" onclick="showTab('appreciated')">Appreciated Tier</div>
-          <div class="priority-tab" onclick="showTab('heroic')">Heroic Tier</div>
-          <div class="priority-tab" onclick="showTab('respected')">Respected Tier</div>
-          <div class="priority-tab" onclick="showTab('legendary')">Legendary Tier</div>
-          <div class="priority-tab" onclick="showTab('godlike')">Godlike Tier</div>
-        </div>
-
-        <div id="appreciated" class="priority-tab active">
-        <h3>Appreciated Tier</h3>
-        <div class="tier-details">
-        <div class="tier-img">
-        <img src="assets/tiers/appreciated.png" alt="Appreciated Tier Image">
-        </div>
-        <div class="tier-text">
-        <p>This is our entry-level tier for those who aren't so interested in the perks, yet still want to contribute.</p>
-        <p><strong>Perks for this pledge are as following:</strong></p>
-        <ul>
-        <li>Your name/steam identifier turns green in the scoreboard.</li>
-        <li>Early access to features that are still WIP.</li>
-        <li>Access to the /watermark command.</li>
-        <li>Get 8 character slots instead of 4. (Characters created in the extra slots will still be available after your pledge runs out!)</li>
-        </ul>
-          <p>This package expires after 31 days. All perks/benefits will then become unavailable.</p>
-          <p><strong>Price: 300 BDT / 350 INR</strong></p>
-          <a href="#" class="buy-btn">Buy Now</a>
-        </div>
-        </div>
-        </div>
-
-
-        <div id="heroic" class="priority-content">
-          <p>🔥 Powerful priority for dedicated players. Includes extra perks and queue speed.</p>
-        </div>
-        <div id="respected" class="priority-content">
-          <p>💎 Balanced priority package. Good for regular contributors with moderate perks.</p>
-        </div>
-        <div id="legendary" class="priority-content">
-          <p>🚀 High-tier priority with access to VIP support and fast-track entry.</p>
-        </div>
-        <div id="godlike" class="priority-content">
-          <p>👑 Ultimate priority for our most generous supporters. Top-tier access and all perks.</p>
+        <div class="priority-links">
+          <a href="priority-appreciated.html">Appreciated Tier</a>
+          <a href="#">Respected Tier</a>
+          <a href="#">Heroic Tier</a>
+          <a href="#">Legendary Tier</a>
+          <a href="#">Godlike Tier</a>
         </div>
       </div>
 
@@ -295,12 +202,5 @@
   <footer>
     <p>© Copyright by Legacy Roleplay Bangladesh</p>
   </footer>
-
-  <script>
-    function showTab(tabId) {
-      document.querySelectorAll('.priority-content').forEach(el => el.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-    }
-  </script>
 </body>
 </html>
